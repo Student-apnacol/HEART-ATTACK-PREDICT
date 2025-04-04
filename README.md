@@ -40,7 +40,7 @@ The dataset contains **303 records** with patient health metrics impacting heart
 ## 3️⃣ Data Preprocessing 🔄
 The dataset was cleaned and preprocessed using:
 
-- ✅ **Handling Missing Values:** Median/Mode imputation
+- ✅ **Handling Missing Values:**  0 Missing values
 - ✅ **Feature Scaling:** RobustScaler to normalize outliers
 - ✅ **Feature Encoding:** One-hot encoding for categorical variables
 - ✅ **Class Imbalance Handling:** No explicit balancing, but **focus on Recall**
