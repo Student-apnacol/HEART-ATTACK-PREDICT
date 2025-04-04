@@ -1,0 +1,9 @@
+
+numpy
+pandas
+scikit-learn
+RandomForest
+streamlit
+matplotlib
+seaborn
+pickle
