@@ -76,7 +76,7 @@ The heart attack risk prediction model was deployed using **Streamlit** (`app2.p
 ### 🔹 Key Features of the App:
 - ✅ **User-Friendly Interface:** Takes medical inputs from users
 - ✅ **Preprocessing Pipeline:** Applies **RobustScaler** on inputs
-- ✅ **Real-Time Prediction:** Uses **XGBoost model** for inference
+- ✅ **Real-Time Prediction:** Uses **Randomforest model** for inference
 - ✅ **Model Interpretation:** Displays whether the user is at **high or low risk**
 
 ### 🔹 Prediction Output Examples:
@@ -90,25 +90,45 @@ The heart attack risk prediction model was deployed using **Streamlit** (`app2.p
 - **Strong Correlations:**
   - **Chest Pain Type (CP)** & **Thalach** had a significant impact on heart attack risk.
   - **Exercise Induced Angina (Exang)** was a major predictor.
-- **Model Performance (XGBoost - Best Model):**
-  - **Precision:** 91.3%
-  - **Recall:** 89.7%
-  - **F1 Score:** 90.5%
-  - **AUC-ROC Score:** 0.94 (Excellent classifier performance!)
+- **Model Performance (RandomForest - Best Model):**
+  
+- **True Positives (TP):** 32 (Correctly predicted heart disease)
+- **True Negatives (TN):** 18 (Correctly predicted no heart disease)
+- **False Positives (FP):** 10 (Incorrectly predicted heart disease)
+- **False Negatives (FN):** 1 (Missed a heart disease case)
+
+### 📌 Key Metrics:
+- **Accuracy:** (18 + 32) / 61 = **0.836**
+- **Precision:** 32 / (32 + 10) = **0.762**
+- **Recall:** 32 / (32 + 1) = **0.970**
+- **F1 Score:** Harmonic mean of precision and recall = **0.831**
+
+The model shows strong **recall**, which is critical in health-related applications to reduce false negatives.
+
 
 ### 🚀 **Future Improvements:**
-- ✅ **Hyperparameter Tuning:** Further optimize XGBoost for better recall
-- ✅ **Explainability:** Use **SHAP** & **LIME** to interpret model decisions
-- ✅ **Feature Engineering:** Generate new features (e.g., BMI, stress levels)
-- ✅ **Class Imbalance Handling:** Use **SMOTE** or **Cost-sensitive learning**
+- ✅ ## 🧠 Model Training & Evaluation Technique
+
+- **Stratified K-Fold Cross-Validation (5 folds)**  
+  Ensures that each fold has a representative distribution of the target classes, improving evaluation reliability.
+
+- **Manual Hyperparameter Tuning**  
+  Specific hyperparameters were selected based on domain knowledge and iterative testing to balance bias and variance.
+
+- **Performance Metrics Used**  
+  - Accuracy  
+  - Precision  
+  - Recall  
+  - F1 Score (Weighted)  
+  - ROC-AUC Score  
 
 ---
 
 ## 7️⃣ Conclusion 🎯
-This project successfully developed and deployed a **heart attack prediction model** using **XGBoost**, emphasizing **recall and precision** to reduce **false negatives**. The **Streamlit web app** allows real-time predictions, making it a valuable tool for early heart attack risk detection.
+This project successfully developed and deployed a **heart attack prediction model** using **RandomForest**, emphasizing **recall and precision** to reduce **false negatives**. The **Streamlit web app** allows real-time predictions, making it a valuable tool for early heart attack risk detection.
 
 ### 🏆 **Key Highlights:**
-- ✅ **Best Model:** XGBoost (**91.3% Precision, 89.7% Recall**)
+- ✅ **Best Model:** RandomForest (**0.762 Precision, 0.970 Recall**)
 - ✅ **Deployed as:** Streamlit Web App
 - ✅ **Balanced Feature Engineering & Preprocessing**
 - ✅ **Scalable for Future Improvements**
@@ -127,7 +147,7 @@ pip install -r requirements.txt
 
 ### 2️⃣ Run the Streamlit App:
 ```bash
-streamlit run app2.py
+streamlit run heart.py
 ```
 
 ---
