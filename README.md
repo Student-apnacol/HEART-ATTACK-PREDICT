@@ -155,8 +155,9 @@ streamlit run heart.py
 ## 📂 Project Structure
 ```
 📁 Heart Attack Prediction
-│-- 📜 app2.py (Streamlit Web App)
-│-- 📜 model_training.ipynb (Notebook with model training code)
+│-- 📜 heart.py (Streamlit Web App)
+│-- 📜 model
+.ipynb (Notebook with model training code)
 │-- 📜 rm_best_model.pkl (Trained XGBoost Model)
 │-- 📜 requirements.txt (Dependencies)
 │-- 📜 README.md (Project Documentation)
