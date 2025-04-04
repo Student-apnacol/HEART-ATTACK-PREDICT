@@ -47,17 +47,26 @@ The dataset was cleaned and preprocessed using:
 
 ---
 
-## 4️⃣ Model Selection & Training 🏆
-### 🔹 Models Evaluated:
-| Model | Precision | Recall | F1 Score |
-|--------|-----------|--------|----------|
-| **Logistic Regression** | 84.2% | 81.5% | 82.8% |
-| **Random Forest** | 87.9% | 85.6% | 86.7% |
-| **XGBoost (Best Model ✅)** | 91.3% | 89.7% | 90.5% |
+# 💓 Heart Disease Prediction
 
-🚀 **Final Model Selected: XGBoost** (Stored in `rm_best_model.pkl`)
+This project aims to predict the presence of heart disease using various machine learning models. After evaluating multiple classifiers on a heart disease dataset, **Random Forest** was selected as the best-performing model.
 
-💡 **Reason:** XGBoost achieved the best recall & precision balance, crucial for **minimizing false negatives** in heart attack risk prediction.
+## 📈 Model Performance Summary
+
+| Model                | Test Accuracy | Test F1 Score | Test Precision | Test Recall | ROC-AUC |
+|---------------------|----------------|----------------|----------------|--------------|---------|
+| Logistic Regression | 0.803          | 0.795          | 0.744          | **0.970**    | 0.788   |
+| Decision Tree       | 0.754          | 0.752          | 0.750          | 0.818        | 0.748   |
+| **Random Forest**   | **0.836**      | **0.831**      | 0.780          | **0.970**    | **0.824** |
+| Gradient Boosting   | 0.820          | 0.817          | **0.789**      | 0.909        | 0.812   |
+
+## ✅ Best Model: Random Forest
+
+- **Highest accuracy** on test data (83.6%)
+- **Best F1 Score**, balancing precision and recall
+- **High recall (97%)** – crucial in medical prediction tasks
+- **Best ROC-AUC**, indicating strong overall classification performance
+
 
 ---
 
